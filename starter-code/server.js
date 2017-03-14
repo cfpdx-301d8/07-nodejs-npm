@@ -13,6 +13,7 @@ app.use(express.static('./public'))
 app.get('*', function(request, response) {
   
   // TODO: Using the response object, send the index.html file back to the user
+  response.sendFile('/public/index.html', {root: '.'})
 });
 
 // TODO: (STRETCH) Write a new route that will handle a request and send the new.html file back to the user
